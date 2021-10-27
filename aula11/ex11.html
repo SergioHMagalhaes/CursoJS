@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brasileiro ou Estrangeiro</title>
+</head>
+<body>
+    <h1>Brasileiro ou Estrangeiro</h1>
+    Digite onde você está vivendo
+    <input type="text" name="country" id="country"> 
+    <input type="button" value="Consultar" onclick="consultar()">
+    <div id="res"></div> 
+
+    <script>
+        function consultar(){
+            var country = document.getElementById('country')
+            var res = document.getElementById('res')
+            if (country.value == 'Brasil'){
+                res.innerHTML = `<p>Você é Brasileiro.</p>`
+            }
+            else {
+                res.innerHTML = `<p>Você é Estrangeiro.</p>`
+            }
+        }
+    </script>
+</body>
+</html>

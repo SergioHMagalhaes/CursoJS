@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultor de multa</title>
+</head>
+<body>
+    <h1>Consultor de multa</h1>
+    Digite a velocidade do carro
+    <input type="number" name="velocity" id="velocity">km/h <input type="button" value="Consultar" onclick="consultar()">
+    <div id="res"></div> 
+
+    <script>
+        function consultar(){
+            var velocity = document.getElementById('velocity')
+            var res = document.getElementById('res')
+            var limit = 60
+            var velocity = Number(velocity.value)
+            if (velocity > limit){
+                res.innerHTML = `<p>Você foi multado, pois passou a <strong>${velocity}km/h</strong> em uma via de <strong>${limit}km/h</strong>.</p>`
+            }
+            else {
+                res.innerHTML = `<p>Você não foi multado, pois passou a <strong>${velocity}km/h</strong> em uma via de <strong>${limit}km/h</strong>.</p>`
+            }
+        }
+    </script>
+</body>
+</html>
