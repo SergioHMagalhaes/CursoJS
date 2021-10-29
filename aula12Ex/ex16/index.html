@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de Idade</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Verificador de Idade</h1>
+    </header>
+
+    <section>
+        <div>
+            <p>Ano de nascimento: 
+                <input type="number" name="year" id="year">
+                </p>
+            <p>Sexo: 
+                <input type="radio" name="radsex" id="masculine" checked>
+                <label for="masculine">Masculino</label>
+                <input type="radio" name="radsex" id="feminine">
+                <label for="feminine">Feminino</label>
+            </p>
+            <input type="button" value="Verificar" onclick="verificar()">
+        </div>
+        <div id="result">
+              
+        </div>
+    </section>
+
+    <footer>
+        &reg; <a class="link" href="https://github.com/SergioHMagalhaes" target="_blank" rel="author">Sérgio Henrique Magalhães</a>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
